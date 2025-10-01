@@ -1,0 +1,178 @@
+@media (max-width: 784px) {
+	.header {
+		.header__plank {
+			padding: 1rem;
+		}
+
+		.burger__toggle {
+			display: flex !important;
+			border: none;
+			background: none;
+			cursor: pointer;
+		}
+		
+
+		.menu {
+			display: none !important;
+			position: absolute;
+			padding: 0;
+			top: 4rem;
+			left: 0;
+			width: 100%;
+			background-color: #FAFAFF;
+
+			&.menu--open {
+				display: grid !important;
+			}
+
+			ul {
+			flex-direction: column;
+			gap: 0 !important;
+			width: 100%;
+
+				li {
+					width: 100%;
+
+					a {
+						justify-content: space-between;
+						padding: 0.75rem 1rem;
+					}
+					
+					img {
+						background-color: #EAF6FF;
+						border-radius: 1px;
+						outline: 7px solid #EAF6FF;
+					}
+
+					.dropdown-menu {
+						position: static !important;
+						transform: none !important;
+						padding-left: 1rem !important;
+
+						li a {
+							padding: 0.5rem 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		.header__baner {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			padding: 16px;
+			
+
+			.baner__text {
+				text-align: left;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				.text__accent {
+					color: #3235E7;
+				}
+			}
+
+			.baner__img img {
+			width: 60%;
+			height: auto;
+			}			
+		}
+	}
+
+	.main {
+		padding: 16px;
+		margin: 1rem auto;
+
+		&__video {
+			.video__preview img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&__advantages {
+			display: grid !important;
+		}
+		
+		.rating__item {
+			.item__card {
+				display: block;
+
+				.card__header {
+					display: block;
+					width: 100%;
+
+					.card__host {
+						padding: 0;
+						gap: 8px;
+
+						.host__row {
+							display: block;
+
+							.host__names {
+								display: flex;
+								margin: 8px auto;
+								gap: 8px;
+							}
+
+							.host__rating {
+								img {
+									width: 16px;
+								}
+							}
+						}
+					}
+				}
+				.card__stat {
+					display: grid;
+                	grid-template-columns: repeat(2, 1fr);
+					gap: 8px;
+
+					.stat__block {
+						display: block;
+
+						.stat__label {
+							display: ruby;
+						}
+					}
+				}
+
+				.card__comparison {
+					display: grid;
+
+					.comparison {
+						padding: 8px;
+
+						.comparison__title {
+							margin: 0;
+							
+							img {
+								width: 24px;
+
+							}
+						}
+					}
+				}	
+			}
+		}
+
+		.faq {
+			&__element {
+				padding-left: 1.2em;
+				margin: 0;
+			}
+		}
+	}
+
+	.footer {
+		display: grid;
+		padding: 16px;
+		margin-bottom: 24px;
+
+		&__nav {
+			display: block;
+		}
+	}
+}
