@@ -1,0 +1,28 @@
+.main__table {
+        border: 1px solid #D6D6D6;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+        margin: 4rem auto;
+        font-weight: 590;
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+
+            td {
+                padding: 1rem;
+                border-bottom: 1px solid #D6D6D6;
+
+                &:first-child {
+                    background-color: #3235E7;
+                    color: #fff;
+                    width: 40%;
+                }
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+        }
+    }

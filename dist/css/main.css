@@ -110,6 +110,31 @@ ul li::marker {
   font-size: 1.3em;
 }
 
+.main__table {
+  border: 1px solid #D6D6D6;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  margin: 4rem auto;
+  font-weight: 590;
+}
+.main__table .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.main__table .table td {
+  padding: 1rem;
+  border-bottom: 1px solid #D6D6D6;
+}
+.main__table .table td:first-child {
+  background-color: #3235E7;
+  color: #fff;
+  width: 40%;
+}
+.main__table .table tr:last-child td {
+  border-bottom: none;
+}
+
 @media (max-width: 784px) {
   .header .header__plank {
     padding: 1rem;
