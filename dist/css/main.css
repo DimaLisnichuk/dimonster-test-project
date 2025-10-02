@@ -350,6 +350,40 @@ ul li::marker {
   display: none;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 3rem 6rem;
+}
+.footer a {
+  color: #3235E7;
+  text-decoration: none;
+}
+.footer__social {
+  display: block;
+}
+.footer__social .social__networks {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+}
+.footer__nav {
+  display: flex;
+  gap: 40px;
+}
+.footer__nav .nav__column .column__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__nav .nav__column .column__list li {
+  margin-bottom: 8px;
+}
+.footer__nav .nav__column .column__list li:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 784px) {
   .header .header__plank {
     padding: 1rem;
