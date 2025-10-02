@@ -9,7 +9,8 @@ const cssDest = 'dist/css/';
 const jsFiles = 'src/scripts/**/*.js';
 const jsDest = 'dist/js/';
 
-const twigFiles = 'src/views/!(_*).twig';
+const twigPages = 'src/views/!(_*).twig';  
+const twigAll = 'src/views/**/*.twig';
 const htmlDest = 'dist/';
 
 function compileSass() {
@@ -25,7 +26,7 @@ function compileJs() {
 }
 
 function compileTwig() {
-    return gulp.src(twigFiles)
+    return gulp.src(twigPages)
         .pipe(twig({}))
         .pipe(gulp.dest(htmlDest));
 }
@@ -33,7 +34,7 @@ function compileTwig() {
 function watchFiles() {
     gulp.watch(scssFiles, compileSass);
     gulp.watch(jsFiles, compileJs);
-    gulp.watch(twigFiles, compileTwig);
+    gulp.watch(twigAll, compileTwig);
 }
 
 exports.default = gulp.series(

@@ -1,0 +1,12 @@
+ul {
+        padding-left: 1rem;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            &::marker {
+                color: #3235E7;
+                font-size: 1.3em;
+            }
+        }
+    }

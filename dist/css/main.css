@@ -12,6 +12,23 @@
   font-style: normal;
   font-display: swap;
 }
+body {
+  font-family: "SF Pro Display", sans-serif;
+  background-color: #FAFAFF;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main {
+  max-width: 782px;
+  margin: 4rem auto;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #D6D6D6;
+}
+
 .header__plank {
   display: flex;
   justify-content: space-between;
@@ -80,6 +97,17 @@
   padding: 4rem 10rem;
   border-radius: 24px;
   background: linear-gradient(to top, #F7F1F3, #E6EFFE);
+}
+
+ul {
+  padding-left: 1rem;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+ul li::marker {
+  color: #3235E7;
+  font-size: 1.3em;
 }
 
 @media (max-width: 784px) {
@@ -215,10 +243,4 @@
   .footer__nav {
     display: block;
   }
-}
-body {
-  font-family: "SF Pro Display", sans-serif;
-  background-color: #FAFAFF;
-  max-width: 1440px;
-  margin: 0 auto;
 }

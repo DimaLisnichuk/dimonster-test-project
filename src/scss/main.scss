@@ -1,12 +1,6 @@
 @import 'fonts';
+@import 'general';
 @import 'header';
-// @import 'main-container';
+@import 'components/main-info';
 // @import 'footer';
 @import 'mobile';
-
-body {
-  	font-family: 'SF Pro Display', sans-serif;
-  	background-color: #FAFAFF;
-  	max-width: 1440px;
-  	margin: 0 auto; 
-}
