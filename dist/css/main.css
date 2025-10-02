@@ -306,6 +306,50 @@ ul li::marker {
   transform: rotate(180deg);
 }
 
+.faq {
+  margin: 48px auto;
+}
+.faq .faq__list {
+  list-style-type: decimal;
+  counter-reset: item;
+}
+.faq .faq__list li {
+  counter-increment: item;
+  padding: 16px;
+}
+.faq .faq__list li::marker {
+  content: counter(item, decimal-leading-zero);
+  font-weight: bold;
+}
+.faq .faq__element {
+  color: #565656;
+  margin: 10px auto;
+}
+.faq .faq__element.active {
+  color: #020220;
+  position: relative;
+}
+.faq .faq__element.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150vw;
+  height: 100%;
+  background-color: #EAF6FF;
+  z-index: -1;
+}
+.faq .faq__element.active .element__body {
+  display: block;
+}
+.faq .faq__element .element__title {
+  margin: 0;
+}
+.faq .faq__element .element__body {
+  display: none;
+}
+
 @media (max-width: 784px) {
   .header .header__plank {
     padding: 1rem;
