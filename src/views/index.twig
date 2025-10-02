@@ -6,47 +6,100 @@
     {% include 'components/_main-info.twig' %}
     {% include 'components/_table.twig' %}
     
-        {% include "components/_video.twig" with {
-            title: 'Najlepsze PL firmy hostingowe według branży lub usługi',
-            video: 'assets/images/video-preview.png',
-            video_title: 'Video preview', 
-        } %}
+        {% set title = 'Najlepsze PL firmy hostingowe według branży lub usługi' %}
+        {% set video = 'assets/images/video-preview.png' %}
+        {% set video_title = 'Video preview' %}
+        {% include "components/_video.twig" %}
 
-
+        
         <section class="main__advantages">
-        {% include 'components/_advantages.twig' with {
-            type: 'plus',
-            icon: 'ad.svg',
-            title: 'Zalety',
-            first_text: '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
+        {% set type = 'plus' %}
+        {% set icon = 'ad.svg' %}
+        {% set title = 'Zalety' %}
+        {% set first_text = '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
                         dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa. 
                         Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje 
                         za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne 
-                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.',
-            second_text: '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
+                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.', %}
+        {% set second_text = '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
                         dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
                         Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
                         WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie 
-                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.'
-        } %}
+                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.' %}
+        {% include 'components/_advantages.twig' %}
 
-        {% include 'components/_advantages.twig' with {
-            type: "minus",
-            icon: 'dis.svg',
-            title: 'Wady',
-            first_text: '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
+        {% set type = 'minus' %}
+        {% set icon = 'dis.svg' %}
+        {% set title = 'Wady' %}
+        {% set first_text = '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
                         dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa. 
                         Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje 
                         za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne 
-                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.',
-            second_text: '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
+                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.', %}
+        {% set second_text = '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
                         dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
                         Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
                         WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie 
-                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.'
-        } %}
+                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.' %}
+        {% include 'components/_advantages.twig' %}
 
         </section>
+
+        <section class="rating">
+            <div class="rating__header">
+                <h2 class="rating__title">
+                    Ranking hostingów 2025 - top 10 najlepszych hostingów
+                </h2>
+                <p class="rating__description">
+                    Na podstawie powyższych kryteriów przygotowaliśmy ranking najlepszych hostingów 2025, 
+                    który przedstawia topowe firmy hostingowe. Oto nasze zestawienie:
+                </p>
+            </div>
+        {% set host_name = 'Hostinger' %}
+        {% set host_rank = '#1' %}
+        {% set rating__text = '<a href="#">Hostinger </a> to jedna z największych i najbardziej znanych firm hostingowych na świecie, 
+                        która oferuje usługi hostingowe dla ponad 29 milionów użytkowników w 178 krajach. 
+                        Firma specjalizuje się w hostingu wordpress, który jest zoptymalizowany pod kątem 
+                        szybkości i łatwości obsługi. Serwis oferuje również hosting współdzielony, vps, hosting cloud i tzw. dedyk na stronę internetową.' %}
+        {% set rating_link = 'Przeczytaj recenzję Hostinger' %}
+        {% set host_img = 'hostinger.png' %}
+        {% set score_name = 'Ocena' %}
+        {% set score = '9.50' %}
+        {% set score_link = 'hostfinger.com.pl' %}
+        {% set btn_img = 'Gift.svg' %}
+        {% set btn_text = 'Otrzymaj bonus -38%' %}
+        {% set uptime = '99.855%' %}
+        {% set productivity = '10/10' %}
+        {% set price = 'od 73.80 zł' %}
+        {% set support = '99.855%' %}
+        {% set offer = '8.5/10' %}
+        {% set secure = '10/10' %}
+        {% include 'components/_raiting-item.twig' %}
+        
+            <hr>
+
+        {% set host_name = 'Hostinger' %}
+        {% set host_rank = '#2' %}
+        {% set rating__text = '<a href="#">Hostinger </a> to jedna z największych i najbardziej znanych firm hostingowych na świecie, 
+                        która oferuje usługi hostingowe dla ponad 29 milionów użytkowników w 178 krajach. 
+                        Firma specjalizuje się w hostingu wordpress, który jest zoptymalizowany pod kątem 
+                        szybkości i łatwości obsługi. Serwis oferuje również hosting współdzielony, vps, hosting cloud i tzw. dedyk na stronę internetową.' %}
+        {% set rating_link = 'Przeczytaj recenzję Hostinger' %}
+        {% set host_img = 'hostinger.png' %}
+        {% set score_name = 'Ocena' %}
+        {% set score = '9.50' %}
+        {% set score_link = 'hostfinger.com.pl' %}
+        {% set btn_img = '' %}
+        {% set btn_text = 'Odwiedzać' %}
+        {% set uptime = '99.855%' %}
+        {% set productivity = '10/10' %}
+        {% set price = 'od 73.80 zł' %}
+        {% set support = '99.855%' %}
+        {% set offer = '8.5/10' %}
+        {% set secure = '10/10' %}
+        {% include 'components/_raiting-item.twig' %}
+        
+        </section>            
    {#  {% include 'components/rating-item.twig' %}
     {% include 'components/faq.twig' %} #}
 {% endblock %}

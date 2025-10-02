@@ -1,0 +1,170 @@
+.rating {
+        a {
+            color: #3235E7;
+        }
+
+        &__item {
+            margin: 32px auto;
+
+            .rating__info {
+                .rating__name {
+                color: #3235E7;
+                }
+
+                .rating__text {
+                margin: 8px auto;
+                }
+
+                .rating__link {
+                text-decoration: none;
+                }
+            }
+
+            .item__card {
+                margin: 32px auto;
+                border-radius: 24px;
+                box-shadow: 0 0 16px 0 #3235E71A;
+                padding: 24px;
+
+                .card__header {
+                    display: flex;
+                    gap: 20px;
+
+                    .card__img {
+                        border-radius: 8px;
+                        box-shadow: 0 0 16px 0 #3235E71A;
+                        text-align: center;
+
+                        img {
+                            display: inline-block;
+                            width: 142px;
+                            height: 80px;
+                            margin: 24px 61px;
+                        }
+                    }
+
+                    .card__host {
+                        display: grid;
+                        gap: 16px;
+                        padding: 12px;
+
+                        .host__row {
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+
+                            span {
+                                font-weight: 590;
+                            }
+
+                            .host__name {
+                                color: #3235E7;
+                            }
+                        }
+
+                        .host__score {
+                            display: flex;
+                            gap: 8px;
+
+                            span {
+                                color: #565656;
+                            }
+                        }
+                    }
+                }
+
+                .card__button {
+                    button {
+                        width: 100%;
+                        background-color: #3235E7;
+                        padding: 2px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        border: none;
+                        border-radius: 12px;
+                        margin: 24px auto;
+                        color: #FAFAFF;
+                    }
+                }
+
+                .card__stat {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 12px 17%;
+
+                    .stat__block {
+                        color: #565656;
+
+                        .stat__value {
+                            color: #3235E7;
+                            font-weight: 590;
+                        }
+                    }
+                }
+
+                .card__comparison {
+                    display: flex;
+                    gap: 8px;
+                    margin: 24px auto;
+                    align-items: flex-start;
+
+                    .comparison {
+                        flex: 1;
+                        border: 1px solid #DBDBDB;
+                        border-radius: 8px;
+                        padding: 16px 24px;
+
+                        &__header {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .comparison__title {
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                margin: 0 0 8px 0;
+
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+
+                            .comparison__toggle {
+                                border: none;
+                                background-color: #FAFAFF;
+                            }
+                        }
+
+                        &__content {
+                            display: none;
+
+                            p {
+                                padding: 8px;
+                                border-radius: 8px;
+                                background-color: #CAFFCA;
+                            }
+                        }
+
+                        &.comparison--minus {
+                            .comparison__content p {
+                                background-color: #FFD4D5;
+                            }
+                        }
+
+                        &.open {
+                            .comparison__content {
+                                display: block;
+                            }
+
+                            .comparison__toggle img {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

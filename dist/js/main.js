@@ -31,6 +31,12 @@ window.addEventListener('scroll', () => {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(closeMenu, 10);
 });
+document.querySelectorAll('.comparison__toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const comparison = toggle.closest('.comparison');
+    comparison.classList.toggle('open');
+  });
+});
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.querySelector('.has-dropdown');
   if (!dropdown) return;
