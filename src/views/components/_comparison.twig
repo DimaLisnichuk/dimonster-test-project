@@ -8,14 +8,8 @@
                             </div>
                             <div class="comparison__content">
                                 <hr>
-                                <p>
-                                    {{ first_text }}
-                                </p>
-                                <p>
-                                    {{ second_text }}
-                                </p>
-                                <p>
-                                    {{ third_text }}
-                                </p>
+                                {% for comparison_item in comparison_items %}
+                                    <p>{{ comparison_item }}</p>
+                                {% endfor %}
                             </div>
                         </div>
