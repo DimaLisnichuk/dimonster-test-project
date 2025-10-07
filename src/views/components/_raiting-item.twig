@@ -8,13 +8,11 @@
                                 <div class="host__names">
                                     <span class="host__rank">{{ host_rank }}</span>
                                     <span class="host__name">{{ host_name }}</span>
-                                </div>    
+                                </div>     
                                 <div class="host__rating">
-                                    <img src="assets/icons/Star.svg">
-                                    <img src="assets/icons/Star.svg">
-                                    <img src="assets/icons/Star.svg">
-                                    <img src="assets/icons/Star.svg">
-                                    <img src="assets/icons/Star-non.svg">
+                                    {% for i in 1..rating_max %}
+                                    <img src="assets/icons/Star.svg" alt="star" class = "{{ i > rating ? 'star__inactive' : '' }}">
+                                    {% endfor %}
                                 </div>
                             </div>
                             <div class="host__score">
@@ -27,9 +25,9 @@
                     <div class="card__button">
                         <button>
                             {% if btn_img %}
-                            <img src="assets/icons/{{ btn_img }}">
+                            <img src="assets/icons/{{ btn_img }}" alt="">
                             {% endif %}
-                            <h3>{{ btn_text }}</h3>
+                            <span>{{ btn_text }}</span>
                         </button>
                     </div>
                     <div class="card__stat">

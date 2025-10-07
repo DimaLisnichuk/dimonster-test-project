@@ -60,6 +60,10 @@
                             .host__name {
                                 color: #3235E7;
                             }
+
+                            .star__inactive {
+                                opacity: 0.4;
+                            }
                         }
 
                         .host__score {
@@ -86,7 +90,18 @@
                         border-radius: 12px;
                         margin: 24px auto;
                         color: #FAFAFF;
-                    }
+                        cursor: pointer;
+                    
+                        &:hover {
+                            background-color: #2c2fc4;
+                        }
+                        
+                        span {
+                            font-size: 16px;  
+                            font-weight: 490;
+                            margin: 16px 0;
+                        }
+                    }  
                 }
 
                 .card__stat {
@@ -135,6 +150,7 @@
                             .comparison__toggle {
                                 border: none;
                                 background-color: #FAFAFF;
+                                cursor: pointer;
                             }
                         }
 

@@ -226,6 +226,9 @@ ul li::marker {
 .rating__item .item__card .card__header .card__host .host__row .host__name {
   color: #3235E7;
 }
+.rating__item .item__card .card__header .card__host .host__row .star__inactive {
+  opacity: 0.4;
+}
 .rating__item .item__card .card__header .card__host .host__score {
   display: flex;
   gap: 8px;
@@ -245,6 +248,15 @@ ul li::marker {
   border-radius: 12px;
   margin: 24px auto;
   color: #FAFAFF;
+  cursor: pointer;
+}
+.rating__item .item__card .card__button button:hover {
+  background-color: #2c2fc4;
+}
+.rating__item .item__card .card__button button span {
+  font-size: 16px;
+  font-weight: 490;
+  margin: 16px 0;
 }
 .rating__item .item__card .card__stat {
   display: grid;
@@ -287,6 +299,7 @@ ul li::marker {
 .rating__item .item__card .card__comparison .comparison__header .comparison__toggle {
   border: none;
   background-color: #FAFAFF;
+  cursor: pointer;
 }
 .rating__item .item__card .card__comparison .comparison__content {
   display: none;
