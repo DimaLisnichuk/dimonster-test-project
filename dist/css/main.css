@@ -29,6 +29,50 @@ hr {
   border-top: 1px solid #D6D6D6;
 }
 
+h1 {
+  font-size: 64px;
+  font-weight: 590;
+  margin: 20px auto;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 590;
+  margin: 20px auto;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 590;
+  margin: 20px auto;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 784px) {
+  h1 {
+    font-size: 32px;
+    font-weight: 590;
+    margin: 20px auto;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 590;
+    margin: 20px auto;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 590;
+    margin: 20px auto;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
 .header__plank {
   display: flex;
   justify-content: space-between;
@@ -167,7 +211,7 @@ ul li::marker {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-top: 0;
+  margin: 0;
 }
 .main__advantages__title img {
   width: 32px;
@@ -221,7 +265,7 @@ ul li::marker {
   gap: 16px;
 }
 .rating__item .item__card .card__header .card__host .host__row span {
-  font-weight: 590;
+  font-size: 24px;
 }
 .rating__item .item__card .card__header .card__host .host__row .host__name {
   color: #3235E7;
@@ -280,7 +324,7 @@ ul li::marker {
   flex: 1;
   border: 1px solid #DBDBDB;
   border-radius: 8px;
-  padding: 16px 24px;
+  padding: 11px 16px;
 }
 .rating__item .item__card .card__comparison .comparison__header {
   display: flex;
@@ -290,7 +334,8 @@ ul li::marker {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 8px 0;
+  margin: 0;
+  font-size: 18px;
 }
 .rating__item .item__card .card__comparison .comparison__header .comparison__title img {
   width: 32px;

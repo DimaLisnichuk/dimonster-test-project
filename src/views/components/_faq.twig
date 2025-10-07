@@ -2,9 +2,9 @@
            <ol class="faq__list">
                 {% for faq in faqs %}
                     <li class="faq__element {% if loop.first %}active{% endif %}">
-                        <h2 class="element__title">
+                        <h3 class="element__title">
                             {{ faq.title }}
-                        </h2>
+                        </h3>
                         <p class="element__body">
                             {{ faq.body }}
                         </p>

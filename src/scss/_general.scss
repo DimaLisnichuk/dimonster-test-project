@@ -15,3 +15,51 @@ body {
     border: none;
     border-top: 1px solid #D6D6D6;
 }
+
+h1 {
+    font-size: 64px;  
+    font-weight: 590;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 40px;  
+    font-weight: 590;
+    margin: 20px auto;
+}
+
+h3 {
+    font-size: 32px;  
+    font-weight: 590;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 16px;  
+    font-weight: 400;
+}
+
+@media (max-width: 784px) {
+    h1 {
+    font-size: 32px;  
+    font-weight: 590;
+    margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 26px;  
+        font-weight: 590;
+        margin: 20px auto;
+    }
+
+    h3 {
+        font-size: 20px;  
+        font-weight: 590;
+        margin: 20px auto;
+    }
+
+    p {
+        font-size: 14px;  
+        font-weight: 400;
+    }
+}
