@@ -1,14 +1,14 @@
 
-                        <div class="comparison comparison--{{ type }}">
+                        <div class="comparison comparison--{{ comparison.type }}">
                             <div class="comparison__header">
-                                <h2 class="comparison__title"><img src="assets/icons/{{ icon }}" alt="">{{ title }}</h2>
+                                <h2 class="comparison__title"><img src="assets/icons/{{ comparison.icon }}" alt="">{{ comparison.title }}</h2>
                                 <button class="comparison__toggle">
                                     <img src="assets/icons/Upload-black.svg">
                                 </button>
                             </div>
                             <div class="comparison__content">
                                 <hr>
-                                {% for comparison_item in comparison_items %}
+                                {% for comparison_item in comparison.comparison_items %}
                                     <p>{{ comparison_item }}</p>
                                 {% endfor %}
                             </div>

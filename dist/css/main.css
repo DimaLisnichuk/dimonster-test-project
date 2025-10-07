@@ -337,6 +337,7 @@ ul li::marker {
 .faq .faq__element {
   color: #565656;
   margin: 10px auto;
+  cursor: pointer;
 }
 .faq .faq__element.active {
   color: #020220;

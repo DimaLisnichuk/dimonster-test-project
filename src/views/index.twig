@@ -63,41 +63,51 @@
     </section>
     
     <section class="main__video">
-        {% set title = 'Najlepsze PL firmy hostingowe według branży lub usługi' %}
-        {% set video = 'assets/images/video-preview.png' %}
-        {% set video_title = 'Video preview' %}
+        {% set video = {
+            title : 'Najlepsze PL firmy hostingowe według branży lub usługi',
+            video : 'assets/images/video-preview.png',
+            video_title : 'Video preview'
+        } %} 
         {% include "components/_video.twig" %}
     </section>  
     
     <section class="main__advantages">
-        {% set type = 'plus' %}
-        {% set icon = 'ad.svg' %}
-        {% set title = 'Zalety' %}
-        {% set items = ['<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
-                        dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa. 
-                        Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje 
-                        za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne 
-                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.', 
-                        '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
-                        dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
-                        Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
-                        WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie 
-                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.'] %}
+        {% set advantages = {
+            type: 'plus',
+            icon: 'ad.svg',
+            title: 'Zalety',
+            items: [
+                '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress,
+                dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa.
+                Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje
+                za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne
+                specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.',
+
+                '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress,
+                dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache,
+                Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na
+                WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie
+                szybciej niż średnia rynkowa wynosząca 3.2 sekundy.' ]
+        } %}
         {% include 'components/_advantages.twig' %}
 
-        {% set type = 'minus' %}
-        {% set icon = 'dis.svg' %}
-        {% set title = 'Wady' %}
-        {% set items = ['<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress, 
-                        dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa. 
-                        Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje 
-                        za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne 
-                        specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.', 
-                        '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
-                        dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
-                        Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
-                        WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie 
-                        szybciej niż średnia rynkowa wynosząca 3.2 sekundy.'] %}
+        {% set advantages = {
+            type: 'minus',
+            icon: 'dis.svg',
+            title: 'Zalety',
+            items: [
+                '<b>Łatwy w obsłudze hosting wordpress</b> - Hostinger oferuje łatwy w obsłudze hosting wordpress,
+                dzięki prostemu i intuicyjnemu panelowi zarządzania Hpanel oraz automatycznemu instalatorowi WordPressa.
+                Można również skorzystać z kreatora na strony internetowe Zyro lub zainstalować inne aplikacje
+                za pomocą instalatora Softaculous. Ponadto Hostinger oferuje profesjonalne wsparcie techniczne
+                specjalistów od WordPressa przez całą dobę przez chat na żywo lub e-mail.',
+
+                '<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress,
+                dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache,
+                Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na
+                WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest znacznie
+                szybciej niż średnia rynkowa wynosząca 3.2 sekundy.' ]
+        } %}
         {% include 'components/_advantages.twig' %}
 
     </section>
@@ -126,30 +136,33 @@
                 <a class="rating__link" href="#">Przeczytaj recenzję Hostinger →</a>
             </div>  
             <div class="item__card">  
-                {% set host_name = 'Hostinger' %}
-                {% set host_rank = '#1' %}
-                {% set rating = 4 %}
-                {% set rating_max = 5 %}
-                {% set host_img = 'hostinger.png' %}
-                {% set img_title = 'logo' %}
-                {% set score_name = 'Ocena' %}
-                {% set score = '9.50' %}
-                {% set score_link = 'hostfinger.com.pl' %}
-                {% set btn_img = 'Gift.svg' %}
-                {% set btn_text = 'Otrzymaj bonus -38%' %}
-                {% set uptime = '99.855%' %}
-                {% set productivity = '10/10' %}
-                {% set price = 'od 73.80 zł' %}
-                {% set support = '99.855%' %}
-                {% set offer = '8.5/10' %}
-                {% set secure = '10/10' %}
+                {% set host = {
+                    host_name : 'Hostinger',
+                    host_rank : '#1',
+                    rating : 4,
+                    rating_max : 5,
+                    host_img : 'hostinger.png',
+                    img_title : 'logo',
+                    score_name : 'Ocena',
+                    score : '9.50',
+                    score_link : 'hostfinger.com.pl', 
+                    btn_img : 'Gift.svg',
+                    btn_text : 'Otrzymaj bonus -38%',
+                    uptime : '99.855%',
+                    productivity : '10/10',
+                    price : 'od 73.80 zł',
+                    support : '99.855%',
+                    offer : '8.5/10',
+                    secure : '10/10'   
+                } %}
                 {% include 'components/_raiting-item.twig' %}
             
                 <div class="card__comparison">
-                    {% set type = 'plus' %}
-                    {% set icon = 'ad.svg' %}
-                    {% set title = 'Zalety' %}
-                    {% set comparison_items = ['<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
+                    {% set comparison = {
+                        type : 'plus',
+                        icon : 'ad.svg',
+                        title : 'Zalety',
+                        comparison_items : ['<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
                                 dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
                                 Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
                                 WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest 
@@ -167,13 +180,15 @@
                                 instalatorowi WordPressa. Można również skorzystać z kreatora na strony internetowe 
                                 Zyro lub zainstalować inne aplikacje za pomocą instalatora Softaculous. 
                                 Ponadto Hostinger oferuje profesjonalne wsparcie techniczne specjalistów 
-                                od WordPressa przez całą dobę przez chat na żywo lub e-mail.' ] %}
+                                od WordPressa przez całą dobę przez chat na żywo lub e-mail.' ]
+                    } %}
                     {% include "components/_comparison.twig" %}
 
-                    {% set type = 'minus' %}
-                    {% set icon = 'dis.svg' %}
-                    {% set title = 'Wady' %}
-                    {% set comparison_items = ['<b>Ograniczona ilość kont e-mail</b> - Hostinger oferuje ograniczoną 
+                    {% set comparison = {
+                        type : 'minus',
+                        icon : 'dis.svg',
+                        title : 'Wady',
+                        comparison_items : ['<b>Ograniczona ilość kont e-mail</b> - Hostinger oferuje ograniczoną 
                                 ilość kont e-mail w zależności od wybranego pakietu hostingu wordpress. 
                                 Najtańszy pakiet zawiera tylko jedno konto e-mail, a najdroższy pakiet 
                                 zawiera tylko 100 kont e-mail. Jeśli potrzebujesz więcej kont e-mail, 
@@ -185,7 +200,8 @@
                                 przez telefon. Można jednak skorzystać z chatu na żywo lub e-maila, 
                                 które są dostępne przez całą dobę i zapewniają szybką i profesjonalną pomoc.',
 
-                                'Darmowe certyfikaty SSL zapewniają bezpieczeństwo danych.' ] %}
+                                'Darmowe certyfikaty SSL zapewniają bezpieczeństwo danych.' ]
+                    } %}
                     {% include "components/_comparison.twig" %}   
 
                 </div>
@@ -208,30 +224,33 @@
                 <a class="rating__link" href="#">Przeczytaj recenzję Hostinger →</a>
             </div>  
             <div class="item__card">  
-                {% set host_name = 'Hostinger' %}
-                {% set host_rank = '#2' %}
-                {% set rating = 3 %}
-                {% set rating_max = 5 %}
-                {% set host_img = 'hostinger.png' %}
-                {% set img_title = 'logo' %}
-                {% set score_name = 'Ocena' %}
-                {% set score = '9.50' %}
-                {% set score_link = 'hostfinger.com.pl' %}
-                {% set btn_img = '' %}
-                {% set btn_text = 'Odwiedzać' %}
-                {% set uptime = '99.855%' %}
-                {% set productivity = '10/10' %}
-                {% set price = 'od 73.80 zł' %}
-                {% set support = '99.855%' %}
-                {% set offer = '8.5/10' %}
-                {% set secure = '10/10' %}
+                {% set host = {
+                    host_name : 'Hostinger',
+                    host_rank : '#2',
+                    rating : 3,
+                    rating_max : 5,
+                    host_img : 'hostinger.png',
+                    img_title : 'logo',
+                    score_name : 'Ocena',
+                    score : '9.50',
+                    score_link : 'hostfinger.com.pl', 
+                    btn_img : '',
+                    btn_text : 'Odwiedzać',
+                    uptime : '99.855%',
+                    productivity : '10/10',
+                    price : 'od 73.80 zł',
+                    support : '99.855%',
+                    offer : '8.5/10',
+                    secure : '10/10'   
+                } %}
                 {% include 'components/_raiting-item.twig' %}
             
                 <div class="card__comparison">
-                    {% set type = 'plus' %}
-                    {% set icon = 'ad.svg' %}
-                    {% set title = 'Zalety' %}
-                    {% set comparison_items = ['<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
+                    {% set comparison = {
+                        type : 'plus',
+                        icon : 'ad.svg',
+                        title : 'Zalety',
+                        comparison_items : ['<b>Najszybszy hosting wordpress</b> - możesz szybko zainstalować wordpress, 
                                 dzięki wykorzystaniu najnowszych technologii, takich jak LiteSpeed Cache, 
                                 Cloudflare CDN, HTTP/2 czy PHP 7.4. Według naszych testów, strona www oparta na 
                                 WordPressie ładuje się na Hostingerze w średnio 1.3 sekundy, co jest 
@@ -249,13 +268,15 @@
                                 instalatorowi WordPressa. Można również skorzystać z kreatora na strony internetowe 
                                 Zyro lub zainstalować inne aplikacje za pomocą instalatora Softaculous. 
                                 Ponadto Hostinger oferuje profesjonalne wsparcie techniczne specjalistów 
-                                od WordPressa przez całą dobę przez chat na żywo lub e-mail.' ] %}
+                                od WordPressa przez całą dobę przez chat na żywo lub e-mail.' ]
+                    } %}
                     {% include "components/_comparison.twig" %}
 
-                    {% set type = 'minus' %}
-                    {% set icon = 'dis.svg' %}
-                    {% set title = 'Wady' %}
-                    {% set comparison_items = ['<b>Ograniczona ilość kont e-mail</b> - Hostinger oferuje ograniczoną 
+                    {% set comparison = {
+                        type : 'minus',
+                        icon : 'dis.svg',
+                        title : 'Wady',
+                        comparison_items : ['<b>Ograniczona ilość kont e-mail</b> - Hostinger oferuje ograniczoną 
                                 ilość kont e-mail w zależności od wybranego pakietu hostingu wordpress. 
                                 Najtańszy pakiet zawiera tylko jedno konto e-mail, a najdroższy pakiet 
                                 zawiera tylko 100 kont e-mail. Jeśli potrzebujesz więcej kont e-mail, 
@@ -267,8 +288,9 @@
                                 przez telefon. Można jednak skorzystać z chatu na żywo lub e-maila, 
                                 które są dostępne przez całą dobę i zapewniają szybką i profesjonalną pomoc.',
 
-                                'Darmowe certyfikaty SSL zapewniają bezpieczeństwo danych.' ] %}
-                    {% include "components/_comparison.twig" %}   
+                                'Darmowe certyfikaty SSL zapewniają bezpieczeństwo danych.' ]
+                    } %}
+                    {% include "components/_comparison.twig" %}  
 
                 </div>
             </div>  
@@ -278,6 +300,43 @@
 
     <section class="faq">
         <h2>FAQ Jeśli masz pytanie</h2>
+        {% set faqs = [
+            {
+                title : 'Lorem ipsum dolor sit amet consectetur',
+                body : 'Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
+                    fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
+                    maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
+                    elementum amet.'
+            },
+            {
+                title : 'Lorem ipsum dolor sit amet consectetur',
+                body : 'Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
+                    fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
+                    maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
+                    elementum amet.'
+            },
+            {
+                title : 'Lorem ipsum dolor sit amet consectetur',
+                body : 'Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
+                    fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
+                    maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
+                    elementum amet.'
+            },
+            {
+                title : 'Lorem ipsum dolor sit amet consectetur',
+                body : 'Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
+                    fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
+                    maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
+                    elementum amet.'
+            },
+            {
+                title : 'Lorem ipsum dolor sit amet consectetur',
+                body : 'Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
+                    fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
+                    maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
+                    elementum amet.'
+            }
+        ] %}    
         {% include 'components/_faq.twig' %} 
     </section>    
 

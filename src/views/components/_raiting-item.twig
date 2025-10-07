@@ -1,33 +1,33 @@
                 
                     <div class="card__header">
                         <div class="card__img">
-                            <img src="assets/images/{{ host_img }}" alt="{{ img_title }}">
+                            <img src="assets/images/{{ host.host_img }}" alt="{{ host.img_title }}">
                         </div>
                         <div class="card__host"> 
                             <div class="host__row">
                                 <div class="host__names">
-                                    <span class="host__rank">{{ host_rank }}</span>
-                                    <span class="host__name">{{ host_name }}</span>
+                                    <span class="host__rank">{{ host.host_rank }}</span>
+                                    <span class="host__name">{{ host.host_name }}</span>
                                 </div>     
                                 <div class="host__rating">
-                                    {% for i in 1..rating_max %}
-                                    <img src="assets/icons/Star.svg" alt="star" class = "{{ i > rating ? 'star__inactive' : '' }}">
+                                    {% for i in 1..host.rating_max %}
+                                    <img src="assets/icons/Star.svg" alt="star" class = "{{ i > host.rating ? 'star__inactive' : '' }}">
                                     {% endfor %}
                                 </div>
                             </div>
                             <div class="host__score">
-                                <span>{{ score_name }}:</span>
-                                <span>{{ score }}/10</span>
+                                <span>{{ host.score_name }}:</span>
+                                <span>{{ host.score }}/10</span>
                             </div>
-                            <a href="#">{{ score_link }}</a>
+                            <a href="#">{{ host.score_link }}</a>
                         </div>
                     </div>
                     <div class="card__button">
                         <button>
-                            {% if btn_img %}
-                            <img src="assets/icons/{{ btn_img }}" alt="">
+                            {% if host.btn_img %}
+                            <img src="assets/icons/{{ host.btn_img }}" alt="">
                             {% endif %}
-                            <span>{{ btn_text }}</span>
+                            <span>{{ host.btn_text }}</span>
                         </button>
                     </div>
                     <div class="card__stat">
@@ -36,42 +36,42 @@
                                 <img class="stat__icon" src="assets/icons/value=uptime.svg">
                                 <span class="stat__name">UPTIME:</span>
                             </div>
-                            <span class="stat__value">{{ uptime }}</span>
+                            <span class="stat__value">{{ host.uptime }}</span>
                         </div>
                         <div class="stat__block">
                             <div class="stat__label">
                                 <img class="stat__icon" src="assets/icons/value=Productivity.svg">
                                 <span class="stat__name">WYDAJNOŚĆ:</span>
                             </div>
-                            <span class="stat__value">{{ productivity }}</span>
+                            <span class="stat__value">{{ host.productivity }}</span>
                         </div>
                         <div class="stat__block">
                             <div class="stat__label">
                                 <img class="stat__icon" src="assets/icons/value=price.svg">
                                 <span class="stat__name">CENA (ROK):</span>
                             </div>
-                            <span class="stat__value">{{ price }}</span>
+                            <span class="stat__value">{{ host.price }}</span>
                         </div>
                         <div class="stat__block">
                             <div class="stat__label">
                                 <img class="stat__icon" src="assets/icons/value=support.svg">
                                 <span class="stat__name">SUPPORT:</span>
                             </div>
-                            <span class="stat__value">{{ support }}</span>
+                            <span class="stat__value">{{ host.support }}</span>
                         </div>
                         <div class="stat__block">
                             <div class="stat__label">
                                 <img class="stat__icon" src="assets/icons/value=offer.svg">
                                 <span class="stat__name">OFERTA:</span>
                             </div>
-                            <span class="stat__value">{{ offer }}</span>
+                            <span class="stat__value">{{ host.offer }}</span>
                         </div>
                         <div class="stat__block">
                             <div class="stat__label">
                                 <img class="stat__icon" src="assets/icons/value=Secure.svg">
                                 <span class="stat__name">BEZPIECZEŃSTWO:</span>
                             </div>
-                            <span class="stat__value">{{ secure }}</span>
+                            <span class="stat__value">{{ host.secure }}</span>
                         </div>
                     </div>
                     

@@ -1,58 +1,13 @@
 
-            <ol class="faq__list">
-                <li class="faq__element active">
-                    <h2 class="element__title">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h2>
-                    <p class="element__body">
-                        Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
-                        fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
-                        maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
-                        elementum amet.
-                    </p>
-                </li>
-                  <li class="faq__element">
-                    <h2 class="element__title">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h2>
-                    <p class="element__body">
-                        Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
-                        fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
-                        maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
-                        elementum amet.
-                    </p>
-                </li>
-                 <li class="faq__element">
-                    <h2 class="element__title">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h2>
-                    <p class="element__body">
-                        Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
-                        fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
-                        maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
-                        elementum amet.
-                    </p>
-                </li>
-                 <li class="faq__element">
-                    <h2 class="element__title">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h2>
-                    <p class="element__body">
-                        Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
-                        fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
-                        maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
-                        elementum amet.
-                    </p>
-                </li>
-                 <li class="faq__element">
-                    <h2 class="element__title">
-                        Lorem ipsum dolor sit amet consectetur
-                    </h2>
-                    <p class="element__body">
-                        Lorem ipsum dolor sit amet consectetur. Quam pulvinar nunc tellus pretium nibh ultricies amet 
-                        fringilla aliquam. A odio molestie habitasse mauris. Velit aliquam quis rutrum urna non at 
-                        maecenas congue nunc. Eget at elit diam sit morbi id. Quis turpis eget sed mattis massa 
-                        elementum amet.
-                    </p>
-                </li>
+           <ol class="faq__list">
+                {% for faq in faqs %}
+                    <li class="faq__element {% if loop.first %}active{% endif %}">
+                        <h2 class="element__title">
+                            {{ faq.title }}
+                        </h2>
+                        <p class="element__body">
+                            {{ faq.body }}
+                        </p>
+                    </li>
+                {% endfor %}
             </ol>
