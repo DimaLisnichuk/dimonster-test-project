@@ -72,6 +72,22 @@
 				.text__accent {
 					color: #3235E7;
 				}
+
+				.hidden__point {
+					display: inline;
+				}
+
+				.hidden__text{
+					display: none;
+
+					&.hidden__text--open {
+						display: inline;
+					}
+				}
+
+				.read__more {
+					display: flex;
+				}
 			}
 
 			.baner__img img {

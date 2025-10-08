@@ -142,6 +142,18 @@ p {
   border-radius: 24px;
   background: linear-gradient(to top, #F7F1F3, #E6EFFE);
 }
+.header__baner .hidden__point {
+  display: none;
+}
+.header__baner .read__more {
+  display: none;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #3235E7;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 ul {
   padding-left: 1rem;
@@ -503,6 +515,18 @@ ul li::marker {
   }
   .header .header__baner .baner__text .text__accent {
     color: #3235E7;
+  }
+  .header .header__baner .baner__text .hidden__point {
+    display: inline;
+  }
+  .header .header__baner .baner__text .hidden__text {
+    display: none;
+  }
+  .header .header__baner .baner__text .hidden__text.hidden__text--open {
+    display: inline;
+  }
+  .header .header__baner .baner__text .read__more {
+    display: flex;
   }
   .header .header__baner .baner__img img {
     width: 60%;
