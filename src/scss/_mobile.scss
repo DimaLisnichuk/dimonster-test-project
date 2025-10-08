@@ -1,4 +1,8 @@
 @media (max-width: 784px) {
+	html, body  {
+		overflow-x: hidden;
+	}
+
 	.header {
 		.header__plank {
 			padding: 1rem;

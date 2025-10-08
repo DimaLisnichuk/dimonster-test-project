@@ -17,6 +17,7 @@ body {
   background-color: #FAFAFF;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .main {
@@ -456,6 +457,9 @@ ul li::marker {
 }
 
 @media (max-width: 784px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .header .header__plank {
     padding: 1rem;
   }
